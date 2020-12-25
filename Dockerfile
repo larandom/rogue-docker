@@ -10,6 +10,7 @@ RUN set -eux; \
 	echo "deb http://deb.debian.org/debian ${DEBIAN_RELEASE} non-free" >  \
 	/etc/apt/sources.list.d/debian-non-free.list; \
 	apt-get update; \
+	apt-get -y upgrade; \
 	apt-get install -y --no-install-recommends \
 		bsdgames-nonfree; \
 	rm -rf /var/lib/apt/lists/*
